@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // conn MongoDB
-const MONGO_URI = process.env.MONGO_URI
+const MONGO_URI = String(process.env.MONGO_URI)
 
 if (!process.env.MONGO_URI) {
   console.log('mongo uri not found');
