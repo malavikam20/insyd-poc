@@ -35,6 +35,7 @@ router.get('/user/:userId', async (req, res) => {
   } catch (err) {
     console.error('error gettin user posts:', err);
     res.status(500).json({ error: err.message });
+    message = res.body.message
   }
 });
 */
