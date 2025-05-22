@@ -14,15 +14,15 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // conn MongoDB
+try {
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
-}).then(() => {
-  console.log('MongoDB connected successfully');
-}).catch(err => {
-  console.error('MongoDB connection error:', err);
-  process.exit(1); // Exit if database connection fails
 });
+  console.log("mongodb connected");
+} catch (error) {
+  console.log(error);
+}
 
 // API routes
 const postRoutes = require('./routes/postRoutes');
