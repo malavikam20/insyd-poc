@@ -11,4 +11,3 @@ module.exports = mongoose.model('Post', postSchema);
 // 1. `userId`: A string representing the ID of the user who created the post.
 // 2. `content`: A string representing the content of the post.
 // 3. `timestamp`: A date field that defaults to the current date and time when the post is created.
-// The schema is then exported as a Mongoose model named 'Post', which can be used to interact with the corresponding MongoDB collection.
