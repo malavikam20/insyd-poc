@@ -12,5 +12,5 @@ router.get('/:userId', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
+//notifications routing based on UserId
 module.exports = router;
