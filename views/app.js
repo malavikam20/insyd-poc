@@ -27,7 +27,7 @@ async function getNotifications() {
     list.innerHTML = "<li>No notifications found.</li>";
     return;
   }
-
+//create document for each message
   notifications.forEach(n => {
     const li = document.createElement("li");
     li.textContent = n.message;
